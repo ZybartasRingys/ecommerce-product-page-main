@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./scss/main.css" />
+
+    <title>Coded by ZR | E-commerce product page</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- mobile menu  -->
+        <ul class="mobile-links" id="mobile">
+          <img class="close" src="./images/icon-close.svg" alt="" />
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <a class="toggle-button" id="btn" href="#">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <!-- mobile menu -->
+
+        <div class="logo"><img src="./images/logo.svg" alt="logo" /></div>
+        <ul class="navbar-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <!-- shoping cart -->
+
+        <div class="shoping-cart" id="basket">
+          <div class="top"><h4>Cart</h4></div>
+          <div class="cart-items" id="cart-item">
+            <p>Your cart is epmty.</p>
+          </div>
+        </div>
+
+        <div class="shop-cart">
+          <img
+            class="cart"
+            id="cart-button"
+            src="./images/icon-cart.svg"
+            alt="Cart"
+          />
+        </div>
+        <div class="user">
+          <img class="avatar" src="./images/image-avatar.png" alt="avatar" />
+        </div>
+      </nav>
+    </header>
+
+    <section class="main-content">
+      <div class="photo-side" id="photos">
+        <div class="main-photo" id="m-photo">
+          <img id="current-img" src="./images/image-product-1.jpg" alt="" />
+          <div class="slide-buttons">
+            <button class="previous"></button>
+            <button class="next"></button>
+          </div>
+        </div>
+
+        <div class="thumbnails">
+          <img src="./images/image-product-1.jpg" alt="" />
+          <img src="./images/image-product-2.jpg" alt="" />
+          <img src="./images/image-product-3.jpg" alt="" />
+          <img src="./images/image-product-4.jpg" alt="" />
+        </div>
+
+        <div class="lightbox-content" id="lbox-content">
+          <div class="close">
+            <button class="x" id="close-btn">
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                  class="x-btn"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="lightbox-main">
+            <img id="lightbox-img" src="./images/image-product-1.jpg" alt="" />
+            <img id="lightbox-img" src="./images/image-product-2.jpg" alt="" />
+            <img id="lightbox-img" src="./images/image-product-3.jpg" alt="" />
+            <img id="lightbox-img" src="./images/image-product-4.jpg" alt="" />
+            <button class="lightbox-btn-next" id="lightbox-next">
+              <img src="./images/icon-previous.svg" alt="Previous" />
+            </button>
+            <button class="lightbox-btn-prev" id="lightbox-prev">
+              <img src="./images/icon-next.svg" alt="Next" />
+            </button>
+          </div>
+          <div class="lightbox-thumbs">
+            <img
+              class="lightbox-thumb"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+            <img
+              class="lightbox-thumb"
+              src="./images/image-product-2.jpg"
+              alt=""
+            />
+            <img
+              class="lightbox-thumb"
+              src="./images/image-product-3.jpg"
+              alt=""
+            />
+            <img
+              class="lightbox-thumb"
+              src="./images/image-product-4.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="text-side">
+        <div class="text">
+          <h4 class="sneaker">Sneaker Company</h4>
+          <h1 class="fall">Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+
+        <div class="prices">
+          <div class="discount-price">
+            <p class="price">$125.00</p>
+            <span class="percent">50%</span>
+          </div>
+          <small class="small">$250.00</small>
+        </div>
+        <div class="count">
+          <div class="count-buttons">
+            <button class="minus" id="minus-btn">
+              <img src="./images/icon-minus.svg" alt="minus" />
+            </button>
+            <span id="count-number">0</span>
+            <button class="plus" id="plus-btn">
+              <img src="./images/icon-plus.svg" alt="plus" />
+            </button>
+          </div>
+          <div class="add-btn">
+            <button class="add" id="addtocart-btn">
+              <svg width="20" height="18" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                  fill="#fff"
+                  fill-rule="nonzero"
+                />
+              </svg>
+
+              <span class="addtocart">Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">ZR</a>.
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
