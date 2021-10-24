@@ -117,13 +117,20 @@
     }
 
     .cart {
-      left: 300px;
+      left: 260px;
       top: 25px;
     }
 
     .avatar {
-      left: 350px;
+      left: 300px;
       top: 12px;
+    }
+
+    //shoping cart
+
+    .shoping-cart {
+      width: 360px;
+      height: 256px;
     }
 
     // mobile sidebar  links
@@ -149,6 +156,7 @@
       li {
         list-style: none;
         margin-bottom: 20px;
+        padding-left: 10px;
       }
       a {
         text-decoration: none;
@@ -162,7 +170,7 @@
 
     .mobile-links.active {
       display: block;
-      margin-left: -5px;
+      margin-left: 1px;
     }
   }
 }

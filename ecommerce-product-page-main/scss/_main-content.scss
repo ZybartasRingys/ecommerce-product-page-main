@@ -1,6 +1,8 @@
+@import './lightbox';
+
 .main-content {
   width: 90%;
-  height: 80vh;
+  height: 90vh;
   margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -231,11 +233,20 @@
 
   .main-photo {
     width: 100%;
-    max-height: 300px !important;
+    max-height: 300px;
     border-radius: 0 !important;
 
+    img {
+      max-width: 375px !important;
+      max-height: 300px !important;
+    }
+
     .slide-buttons {
+      width: 250px;
       display: flex !important;
+      position: absolute;
+      top: 300px;
+      left: 1px;
     }
   }
 
@@ -245,6 +256,7 @@
 
   .text-side {
     width: 100% !important;
+    margin-left: 0;
     max-width: 375px;
     padding: 15px;
   }
@@ -256,7 +268,7 @@
 
     .small {
       margin-top: 30px;
-      margin-left: 130px;
+      margin-left: 100px;
     }
   }
 

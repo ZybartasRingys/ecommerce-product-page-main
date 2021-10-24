@@ -128,12 +128,16 @@
     display: none;
   }
   .navbar .cart {
-    left: 300px;
+    left: 260px;
     top: 25px;
   }
   .navbar .avatar {
-    left: 350px;
+    left: 300px;
     top: 12px;
+  }
+  .navbar .shoping-cart {
+    width: 360px;
+    height: 256px;
   }
   .navbar .mobile-links {
     display: none;
@@ -155,6 +159,7 @@
   .navbar .mobile-links li {
     list-style: none;
     margin-bottom: 20px;
+    padding-left: 10px;
   }
   .navbar .mobile-links a {
     text-decoration: none;
@@ -166,13 +171,131 @@
   }
   .navbar .mobile-links.active {
     display: block;
-    margin-left: -5px;
+    margin-left: 1px;
   }
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 120vh;
+  background-color: black;
+  opacity: 0.8;
+  display: none;
+}
+
+#lightbox.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#lbox-content {
+  position: absolute;
+  width: 550px;
+  height: 722px;
+  left: 445px;
+  top: 89px;
+  z-index: 1500;
+  display: none;
+}
+
+#lbox-content .lightbox-main {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  max-height: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#lbox-content .lightbox-main #lightbox-img {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  max-height: 550px;
+  border-radius: 10px;
+}
+
+#lbox-content .lightbox-thumbs {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+#lbox-content .lightbox-thumbs .lightbox-thumb {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#lbox-content.active {
+  display: block;
+}
+
+.x {
+  cursor: pointer;
+  background: none;
+  border: none;
+  position: relative;
+  left: 535px;
+  top: -10px;
+}
+
+.x .x-btn:hover {
+  fill: #ff7d1a;
+}
+
+.lightbox-btn-next {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: -30px;
+}
+
+.lightbox-btn-prev {
+  width: 56px;
+  height: 56px;
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  left: 520px;
 }
 
 .main-content {
   width: 90%;
-  height: 80vh;
+  height: 90vh;
   margin: 0px auto;
   display: -ms-grid;
   display: grid;
@@ -436,19 +559,28 @@
   }
   .main-photo {
     width: 100%;
-    max-height: 300px !important;
+    max-height: 300px;
     border-radius: 0 !important;
   }
+  .main-photo img {
+    max-width: 375px !important;
+    max-height: 300px !important;
+  }
   .main-photo .slide-buttons {
+    width: 250px;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
+    position: absolute;
+    top: 300px;
+    left: 1px;
   }
   .thumbnails {
     display: none;
   }
   .text-side {
     width: 100% !important;
+    margin-left: 0;
     max-width: 375px;
     padding: 15px;
   }
@@ -463,7 +595,7 @@
   }
   .prices .small {
     margin-top: 30px;
-    margin-left: 130px;
+    margin-left: 100px;
   }
   .count {
     width: 100%;
@@ -552,7 +684,7 @@
   z-index: 1000;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 120vh;
   background-color: black;
   opacity: 0.8;
   display: none;
@@ -674,10 +806,15 @@
 
 body {
   font-size: 16px;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 .attribution {
   text-align: center;
+  color: #ff7d1a;
+}
+
+.attribution a {
+  color: #ff7d1a;
 }
 /*# sourceMappingURL=main.css.map */
