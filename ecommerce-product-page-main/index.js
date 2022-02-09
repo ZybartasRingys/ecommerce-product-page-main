@@ -19,10 +19,9 @@ const plusbtn = document.getElementById("plus-btn");
 const countNumber = document.getElementById("count-number");
 const addToCart = document.getElementById("addtocart-btn");
 const cartItem = document.getElementById("cart-item");
-const clearCart = document.getElementById("empty-cart");
-const body = document.querySelector("body");
+const slides = document.querySelectorAll(".slide");
 
-console.log(body);
+const body = document.querySelector("body");
 
 const opacity = 0.4;
 let count = 0;
@@ -103,17 +102,44 @@ cartBtn.addEventListener("click", (e) => {
 
 // carousel
 
+let counter = 0;
+
+lightboxNext.addEventListener("click", function () {
+  counter++;
+  carousel();
+});
+
+lightboxPrev.addEventListener("click", function () {
+  counter--;
+  carousel();
+});
+
+function carousel() {
+  if (counter === slides.length) {
+    counter = 0;
+  }
+
+  if (counter < 0) {
+    counter = slides.length - 1;
+  }
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
+
+slides.forEach(function (slide, index) {
+  slide.style.left = `${index * 100}%`;
+});
+
 // cart
 
 addToCart.addEventListener("click", addToBasket);
 
 // empty cart
 
-// clearCart.addEventListener("click", function () {
-//   console.log(clearCart);
-// });
-
 function addToBasket() {
+  const clearCart = document.getElementById("empty-cart");
+  console.log(clearCart);
   const html = `
 
   <div class="main-cart">
@@ -136,4 +162,8 @@ function addToBasket() {
   `;
 
   cartItem.innerHTML = html;
+
+  // clearCart.addEventListener("click", function () {
+  //   console.log(clearCart);
+  // });
 }
