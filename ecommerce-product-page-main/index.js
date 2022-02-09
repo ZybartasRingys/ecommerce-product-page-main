@@ -19,20 +19,27 @@ const plusbtn = document.getElementById("plus-btn");
 const countNumber = document.getElementById("count-number");
 const addToCart = document.getElementById("addtocart-btn");
 const cartItem = document.getElementById("cart-item");
+const clearCart = document.getElementById("empty-cart");
 
 const opacity = 0.4;
 let count = 0;
+
+console.log(clearCart);
 
 // plus minus buttons
 
 plusbtn.addEventListener("click", () => {
   count++;
   countNumber.textContent = count;
+  console.log(count);
 });
 
 minusbtn.addEventListener("click", () => {
-  count--;
   countNumber.textContent = count;
+
+  if (count > 0) {
+    count--;
+  }
 });
 
 //add to chart
@@ -94,3 +101,38 @@ cartBtn.addEventListener("click", () => {
 });
 
 // carousel
+
+// cart
+
+addToCart.addEventListener("click", addToBasket);
+
+// empty cart
+
+// clearCart.addEventListener("click", function () {
+//   console.log(clearCart);
+// });
+
+function addToBasket() {
+  const html = `
+
+  <div class="main-cart">
+
+  <div class="cart-container">
+  <img class="cart-img" src="./images/image-product-1.jpg" alt="Shoe" />
+  <div class="cart-text">
+  <h5 class="cart-heading">Fall Limited Edition Sneakers</h5>
+  <p class="cart-heading">125.00 x ${count} <span class="total">$${
+    125.0 * count
+  }</span></p>
+  </div>
+
+  <img class="empty-cart" id="empty-cart" src="./images/icon-delete.svg" alt="Shoe" />
+  </div>
+
+  <button class="checkout-btn">Checkout</button>
+
+  </div>
+  `;
+
+  cartItem.innerHTML = html;
+}
