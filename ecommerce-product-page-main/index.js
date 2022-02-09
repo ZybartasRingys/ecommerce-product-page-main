@@ -20,11 +20,12 @@ const countNumber = document.getElementById("count-number");
 const addToCart = document.getElementById("addtocart-btn");
 const cartItem = document.getElementById("cart-item");
 const clearCart = document.getElementById("empty-cart");
+const body = document.querySelector("body");
+
+console.log(body);
 
 const opacity = 0.4;
 let count = 0;
-
-console.log(clearCart);
 
 // plus minus buttons
 
@@ -96,7 +97,7 @@ sideBar.addEventListener("click", () => {
 
 //tooggle cart
 
-cartBtn.addEventListener("click", () => {
+cartBtn.addEventListener("click", (e) => {
   basket.classList.toggle("active");
 });
 
